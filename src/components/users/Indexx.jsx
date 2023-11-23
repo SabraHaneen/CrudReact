@@ -130,6 +130,7 @@ if(loader){
         </div>
       </div>
     </div>
+
     <div className="col py-3">
     <table className="table">
   <thead>
@@ -142,6 +143,7 @@ if(loader){
 
     </tr>
   </thead>
+
   <tbody>
   {users.map((user,index)=>{
     return(
@@ -154,6 +156,7 @@ if(loader){
                 <td  className='btn btn-danger' onClick={()=>deleteUser(user._id)}>Delete</td>
                 <td ><Link to={`/users/${user._id}`} className='btn btn-info'>Detailes</Link></td>
                 <td ><Link to={`/users/edit/${user._id}`}className='btn btn-success'>Edit</Link></td>
+               
 
 
 
@@ -166,6 +169,8 @@ if(loader){
 
     </div>
   </div>
+  <Link to={'/users/create'}className='btn btn-success d-flex justify-content-center'>create</Link>
+
 </div>
 
   )
